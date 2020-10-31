@@ -12,16 +12,19 @@ import javax.validation.constraints.NotNull;
 public class User {
     @Id
     @GeneratedValue
-    private  long id;
-@NotNull
-     private String vacanteRomania;
-@NotNull
-     private  String vacanteStrainatate;
-@NotNull
-     private String bileteDeAvion;
-@NotNull
-     private int perioada;
-
+    private long id;
+    @NotNull
+    private String firstName;
+    @NotNull
+    private String lastName;
+    @NotNull
+    private String vacanteRomania;
+    @NotNull
+    private String vacanteStrainatate;
+    @NotNull
+    private String bileteDeAvion;
+    @NotNull
+    private int perioada;
 
     public long getId() {
         return id;
@@ -29,6 +32,22 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getVacanteRomania() {
@@ -67,6 +86,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", vacanteRomania='" + vacanteRomania + '\'' +
                 ", vacanteStrainatate='" + vacanteStrainatate + '\'' +
                 ", bileteDeAvion='" + bileteDeAvion + '\'' +
@@ -74,3 +95,5 @@ public class User {
                 '}';
     }
 }
+
+
