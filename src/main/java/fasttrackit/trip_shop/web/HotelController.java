@@ -18,8 +18,8 @@ public class HotelController {
         this.hotelService = hotelService;
     }
 @GetMapping
-public ResponseEntity<Page<Hotel>>getHotels(GetHotelRequest request, Pageable pageable){
-    Page<Hotel> hotels = hotelService.getHotels(request, pageable);
-    return new ResponseEntity<>(hotels, HttpStatus.OK);
+public ResponseEntity<Page<GetHotelRequest>>getHotels(GetHotelRequest request, Pageable pageable){
+    Page<GetHotelRequest> hotels = hotelService.getHotels(request, pageable);
+     return new ResponseEntity<>(hotels,HttpStatus.OK);
 }
 }
